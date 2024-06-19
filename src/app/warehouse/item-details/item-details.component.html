@@ -1,0 +1,32 @@
+<div class="container">
+    <button class="repeatButton" (click)="routeBack()"><a>Nazad</a></button>
+    <div class="img-container">
+        <div>
+            <span *ngIf="!item?.sold && !item?.donated && !item?.active">Neoglašeno</span>
+            <span *ngIf="item?.active">U prodaji</span>
+            <span *ngIf="item?.sold">Prodato</span>
+            <span *ngIf="item?.donated">Donirano</span>
+        </div>
+        <img src="../../../assets/products/{{item?.photo}}.png" alt="Product photo">
+        <button id="sell" (click)="openSellDialog()" [disabled]="item?.sold || item?.donated">Prodaj</button>
+        <button id="donate" (click)="donateItem()" [disabled]="item?.donated || item?.sold">Doniraj</button>
+        <button id="edit" [routerLink]="[ 'edit']">Izmeni</button>
+    </div>
+    <p><span class="label">Tip</span> - <span class="value">{{item?.type}}</span></p>
+    <p><span class="label">Pol</span> - <span class="value">{{item?.gender}}</span></p>
+    <p *ngIf="item?.size !== ''"><span class="label">Veličina</span> - <span class="value">{{item?.size}}</span></p>
+    <p *ngIf="item?.total_length !== 0"><span class="label">Ukupna dužina</span> - <span class="value">{{item?.total_length}} </span>cm</p>
+    <p *ngIf="item?.total_width !== 0"><span class="label">Ukupna širina</span> - <span class="value">{{item?.total_width}} </span>cm</p>
+    <p *ngIf="item?.sleeve_length !== 0"><span class="label">Dužina rukava</span> - <span class="value">{{item?.sleeve_length}} </span>cm</p>
+    <p *ngIf="item?.waist_width !== 0"><span class="label">Širina struka</span> - <span class="value">{{item?.waist_width}} </span>cm</p>
+    <p *ngIf="item?.hip_width !== 0"><span class="label">Širina kukova</span> - <span class="value">{{item?.hip_width}} </span>cm</p>
+    <p *ngIf="item?.leg_width !== 0"><span class="label">Širina nogavice</span> - <span class="value">{{item?.leg_width}} </span>cm</p>
+    <p *ngIf="item?.shoulder_width !== 0"><span class="label">Širina ramena</span> - <span class="value">{{item?.shoulder_width}} </span>cm</p>
+    <p><span class="label">Boja</span> - <span class="value" *ngFor="let color of item?.color">{{color}} | </span></p>
+    <p><span class="label">Materijal</span> - <span class="value">{{item?.material}}</span></p>
+    <p><span class="label">Nabavna cena</span> - <span class="value">{{item?.purchase_price}} RSD</span></p>
+    <p><span class="label">Prodajna cena</span> - <span class="value">{{item?.retail_price}} RSD</span></p>
+    <p><span class="label">Stanje</span> - <span class="value">{{item?.condition}}</span></p>
+    <p><span class="label">Datum unosa</span> - <span class="value">{{item?.entry_date | date: 'dd.MM.yyyy'}}</span></p>
+    <p><span class="value" id="description">{{item?.description}}</span></p>
+</div>

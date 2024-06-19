@@ -1,0 +1,50 @@
+@import '../../../assets/scss/mixins';
+@import '../../../assets/scss/vars';
+
+.container {
+    text-align: center;
+    width: 100%;
+    form {
+        display: inline-block;
+        width: 40%;
+        padding-bottom: 5em;
+    }
+}
+
+.formGroup {
+    padding-bottom: 2em;
+    @include clearfix;
+    label {
+        float: left;
+        width: 40%;
+        text-align: left;
+    }
+    input, select {
+        float: right;
+        width: 60%;
+        height: 2em;
+        border: none;
+        background-color: $color-form_field;
+        padding-left: 0.5em;
+    }
+    button {
+        float: right;
+        font-weight: 600;
+        width: 10em;
+        height: 2em;
+        padding: 0.5em;
+        border: none;
+        background-color: black;
+        color: white;
+        &:disabled {
+                background-color: $color-form_button_disabled;
+        }
+    }
+}
+
+.invalid {
+    border-left: 6px solid red;
+    padding-left: 1em;
+    border-radius: 4px;
+    overflow: hidden;
+}

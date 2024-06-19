@@ -1,0 +1,145 @@
+<div class="container">
+    <form [ngClass]="{'padded': item?._id}" [formGroup]="itemForm" (submit)="onSubmit()">
+        <div class="formGroup">
+            <label for="type" [ngClass]="{'invalid': itemForm.controls.type.touched && !itemForm.controls.type.valid}">Tip predmeta</label>
+            <select name="type" id="type" formControlName="type">
+                <option value=""></option>
+                <option value="blejzer">Blejzer</option>
+                <option value="bluza">Bluza</option>
+                <option value="bodi">Bodi</option>
+                <option value="dres">Dres</option>
+                <option value="duks">Duks</option>
+                <option value="džemper">Džemper</option>
+                <option value="farmerice">Farmerice</option>
+                <option value="haljina">Haljina</option>
+                <option value="jakna">Jakna</option>
+                <option value="kapa">Kapa</option>
+                <option value="kaput">Kaput</option>
+                <option value="kombinezon">Kombinezon</option>
+                <option value="košulja">Košulja</option>
+                <option value="majica">Majica</option>
+                <option value="pantalone">Pantalone</option>
+                <option value="prsluk">Prsluk</option>
+                <option value="suknja">Suknja</option>
+                <option value="šal">Šal</option>
+                <option value="šešir">Šešir</option>
+                <option value="šorc">Šorc</option>
+                <option value="tašnica">Tašnica</option>
+                <option value="top">Top</option>
+                <option value="trenerka">Trenerka</option>
+                <option value="tunika">Tunika</option>
+            </select>
+        </div>
+        <div class="formGroup">
+            <label for="gender" [ngClass]="{'invalid': itemForm.controls.gender.touched && !itemForm.controls.gender.valid}">Pol</label>
+            <select name="gender" id="gender" formControlName="gender">
+                <option value=""></option>
+                <option value="muško">Muško</option>
+                <option value="žensko">Žensko</option>
+                <option value="unisex">Unisex</option>
+            </select>
+        </div>
+        <div class="formGroup">
+            <label for="size" [ngClass]="{'invalid': itemForm.controls.size.touched && !itemForm.controls.size.valid}">Veličina</label>
+            <input type="text" name="size" id="size" formControlName="size">
+        </div>
+        <div class="formGroup">
+            <label for="shoulder_width" [ngClass]="{'invalid': itemForm.controls.shoulder_width.touched && !itemForm.controls.shoulder_width.valid}">Širina ramena</label>
+            <input type="number" name="shoulder_width" id="shoulder_width" formControlName="shoulder_width">
+        </div>
+        <div class="formGroup">
+            <label for="waist_width" [ngClass]="{'invalid': itemForm.controls.waist_width.touched && !itemForm.controls.waist_width.valid}">Širina struka</label>
+            <input type="number" name="waist_width" id="waist_width" formControlName="waist_width">
+        </div>
+        <div class="formGroup">
+            <label for="hip_width" [ngClass]="{'invalid': itemForm.controls.hip_width.touched && !itemForm.controls.hip_width.valid}">Širina kukova</label>
+            <input type="number" name="hip_width" id="hip_width" formControlName="hip_width">
+        </div>
+        <div class="formGroup">
+            <label for="leg_width" [ngClass]="{'invalid': itemForm.controls.leg_width.touched && !itemForm.controls.leg_width.valid}">Širina nogavice</label>
+            <input type="number" name="leg_width" id="leg_width" formControlName="leg_width">
+        </div>
+        <div class="formGroup">
+            <label for="total_width" [ngClass]="{'invalid': itemForm.controls.total_width.touched && !itemForm.controls.total_width.valid}">Ukupna širina</label>
+            <input type="number" name="total_width" id="total_width" formControlName="total_width">
+        </div>
+        <div class="formGroup">
+            <label for="sleeve_length" [ngClass]="{'invalid': itemForm.controls.sleeve_length.touched && !itemForm.controls.sleeve_length.valid}">Dužina rukava</label>
+            <input type="number" name="sleeve_length" id="sleeve_length" formControlName="sleeve_length">
+        </div>
+        <div class="formGroup">
+            <label for="total_length" [ngClass]="{'invalid': itemForm.controls.total_length.touched && !itemForm.controls.total_length.valid}">Ukupna dužina</label>
+            <input type="number" name="total_length" id="total_length" formControlName="total_length">
+        </div>
+        <div class="formGroup">
+            <label for="color" [ngClass]="{'invalid': itemForm.controls.color.touched && !itemForm.controls.color.valid}">Boja</label>
+            <select name="color" id="color" multiple formControlName="color">
+                <option value="crna">Crna</option>
+                <option value="bela">Bela</option>
+                <option value="siva">Siva</option>
+                <option value="srebrna">Srebrna</option>
+                <option value="zlatna">Zlatna</option>
+                <option value="crvena">Crvena</option>
+                <option value="plava">Plava</option>
+                <option value="žuta">Žuta</option>
+                <option value="zelena">Zelena</option>
+                <option value="roze">Roze</option>
+                <option value="ljubičasta">Ljubicasta</option>
+                <option value="narandžasta">Narandžasta</option>
+                <option value="braon">Braon</option>
+                <option value="bež">Bež</option>
+            </select>
+        </div>
+        <div class="formGroup">
+            <label for="description" [ngClass]="{'invalid': itemForm.controls.description.touched && !itemForm.controls.description.valid}">Opis</label>
+            <textarea name="description" id="description" formControlName="description"></textarea>
+        </div>
+        <div class="formGroup">
+            <label for="material" [ngClass]="{'invalid': itemForm.controls.material.touched && !itemForm.controls.material.valid}">Materijal</label>
+            <input type="text" name="material" id="material" formControlName="material">
+        </div>
+        <div class="formGroup">
+            <label for="purchase_price" [ngClass]="{'invalid': itemForm.controls.purchase_price.touched && !itemForm.controls.purchase_price.valid}">Nabavna cena</label>
+            <input type="number" name="purchase_price" id="purchase_price" formControlName="purchase_price">
+        </div>
+        <div class="formGroup">
+            <label for="retail_price" [ngClass]="{'invalid': itemForm.controls.retail_price.touched && !itemForm.controls.retail_price.valid}">Prodajna cena</label>
+            <input type="number" name="retail_price" id="retail_price" formControlName="retail_price">
+        </div>
+        <div class="formGroup">
+            <label for="condition" [ngClass]="{'invalid': itemForm.controls.condition.touched && !itemForm.controls.condition.valid}">Stanje</label>
+            <select name="condition" id="condition" formControlName="condition">
+                <option value=""></option>
+                <option value="odlično">Odlično</option>
+                <option value="dobro">Dobro</option>
+                <option value="novo">Novo</option>
+            </select>
+        </div>
+        <div class="formGroup">
+            <label for="photo" [ngClass]="{'invalid': itemForm.controls.photo.touched && !itemForm.controls.photo.valid}">Naziv fotografije</label>
+            <input type="text" name="photo" id="photo" formControlName="photo">
+        </div>
+        <div class="formGroup" *ngIf="item?._id">
+            <label for="sold" [ngClass]="{'invalid': itemForm.controls.sold.touched && !itemForm.controls.sold.valid}">Prodato</label>
+            <input type="checkbox" name="sold" id="sold" formControlName="sold">
+        </div>
+        <div class="formGroup" *ngIf="item?._id">
+            <label for="donated" [ngClass]="{'invalid': itemForm.controls.donated.touched && !itemForm.controls.donated.valid}">Donirano</label>
+            <input type="checkbox" name="donated" id="donated" formControlName="donated">
+        </div>
+        <div class="formGroup" *ngIf="item?._id">
+            <label for="active" [ngClass]="{'invalid': itemForm.controls.active.touched && !itemForm.controls.active.valid}">U prodaji</label>
+            <input type="checkbox" name="active" id="active" formControlName="active">
+        </div>
+        <div class="formGroup" *ngIf="item?._id">
+            <label for="stored" [ngClass]="{'invalid': itemForm.controls.stored.touched && !itemForm.stored.active.valid}">Neaktivno</label>
+            <input type="checkbox" name="stored" id="stored" formControlName="stored">
+        </div>
+        <div class="formGroup">
+            <button type="submit" class="btn" [disabled]="itemForm.invalid">
+                <span *ngIf="!item?._id">Dodaj</span>
+                <span *ngIf="item?._id">Izmeni</span>
+            </button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,18 @@
+<form>
+    <div class="formGroup">
+        <label for="stored">Neaktivno</label>
+        <input type="checkbox" id="stored" name="stored" [(ngModel)]="filter.stored" (change)="updateFilter()">
+    </div>
+    <div class="formGroup">
+        <label for="active">U prodaji</label>
+        <input type="checkbox" id="active" name="active" [(ngModel)]="filter.active" (change)="updateFilter()">
+    </div>
+    <div class="formGroup">
+        <label for="sold">Prodato</label>
+        <input type="checkbox" id="sold" name="sold" [(ngModel)]="filter.sold" (change)="updateFilter()">
+    </div>
+    <div class="formGroup">
+        <label for="donated">Donirano</label>
+        <input type="checkbox" id="donated" name="donated" [(ngModel)]="filter.donated" (change)="updateFilter()">
+    </div>
+</form>

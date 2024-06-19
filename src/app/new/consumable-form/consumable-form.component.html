@@ -1,0 +1,21 @@
+<div class="container">
+    <form [formGroup]="consumableForm" (submit)="onSubmit()">
+        <div class="formGroup">
+            <label for="name" [ngClass]="{'invalid': consumableForm.controls.name.touched && !consumableForm.controls.name.valid}">Naziv</label>
+            <input type="text" name="name" id="name" formControlName="name">
+        </div>
+        <div class="formGroup">
+            <label for="purchase_price" [ngClass]="{'invalid': consumableForm.controls.purchase_price.touched && !consumableForm.controls.purchase_price.valid}">Nabavna cena</label>
+            <input type="number" name="purchase_price" id="purchase_price" formControlName="purchase_price">
+        </div>
+        <div class="formGroup">
+            <label for="quantity" [ngClass]="{'invalid': consumableForm.controls.quantity.touched && !consumableForm.controls.quantity.valid}">Količina</label>
+            <input type="number" name="quantity" id="quantity" formControlName="quantity">
+        </div>
+        <div class="formGroup">
+            <button type="submit" class="btn" [disabled]="consumableForm.invalid">
+                Dodaj
+            </button>
+        </div>
+    </form>
+</div>

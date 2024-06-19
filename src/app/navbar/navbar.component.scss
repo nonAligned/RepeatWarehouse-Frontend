@@ -1,0 +1,29 @@
+nav {
+    position: fixed;
+    z-index: 1000;
+    background-color: rgba($color: #ffffff, $alpha: 0.8);
+    top: 0;
+    width: 100%;
+    padding: 1em 2em;
+    a {
+        img {
+            height: 3em;
+        }
+    }
+    
+    ul {
+        float: right;
+        li {
+            display: inline-block;
+            padding: 1em;
+            font-weight: 600;
+            &:last-of-type {
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+.active {
+    border-bottom: 2px black solid;
+}

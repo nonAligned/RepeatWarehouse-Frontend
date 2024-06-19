@@ -1,0 +1,52 @@
+<div class="container">
+    <form [formGroup]="marketingForm" (submit)="onSubmit()">
+        <div class="formGroup">
+            <label for="type" [ngClass]="{'invalid': marketingForm.controls.type.touched && !marketingForm.controls.type.valid}">Tip reklame</label>
+            <select name="type" id="type" formControlName="type">
+                <option value=""></option>
+                <option value="banner">Internet baner</option>
+                <option value="social">Društvene mreže</option>
+                <option value="video">Video</option>
+                <option value="billboard">Bilbord</option>
+                <option value="tv">TV spot</option>
+                <option value="print">Oglas</option>
+                <option value="event">Event</option>
+            </select>
+        </div>
+        <div class="formGroup">
+            <label for="cost" [ngClass]="{'invalid': marketingForm.controls.cost.touched && !marketingForm.controls.cost.valid}">Cena</label>
+            <input type="number" name="cost" id="cost" formControlName="cost">
+        </div>
+        <div class="formGroup">
+            <label for="target_audience" [ngClass]="{'invalid': marketingForm.controls.target_audience.touched && !marketingForm.controls.target_audience.valid}">Ciljna grupa</label>
+            <select name="target_audience" id="target_audience" formControlName="target_audience">
+                <option value=""></option>
+                <option value="female">Žene</option>
+                <option value="male">MuŠkarci</option>
+                <option value="all">Svi</option>
+            </select>
+        </div>
+        <div class="formGroup">
+            <label for="age_group" [ngClass]="{'invalid': marketingForm.controls.age_group.touched && !marketingForm.controls.age_group.valid}">Starosna grupa</label>
+            <select name="age_group" id="age_group" formControlName="age_group">
+                <option value=""></option>
+                <option value="18-">ispod 18</option>
+                <option value="19-25">od 19 do 25</option>
+                <option value="26-35">od 26 do 35</option>
+                <option value="36-45">od 36 do 45</option>
+                <option value="45-55">od 46 do 55</option>
+                <option value="56-65">od 56 do 65</option>
+                <option value="66+">preko 66</option>
+            </select>
+        </div>
+        <div class="formGroup">
+            <label for="platform" [ngClass]="{'invalid': marketingForm.controls.platform.touched && !marketingForm.controls.platform.valid}">Platforma</label>
+            <input type="text" name="platform" id="platform" formControlName="platform">
+        </div>
+        <div class="formGroup">
+            <button type="submit" class="btn" [disabled]="marketingForm.invalid">
+                Dodaj
+            </button>
+        </div>
+    </form>
+</div>

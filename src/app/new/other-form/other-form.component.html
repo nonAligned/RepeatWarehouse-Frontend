@@ -1,0 +1,17 @@
+<div class="container">
+    <form [formGroup]="otherForm" (submit)="onSubmit()">
+        <div class="formGroup">
+            <label for="name" [ngClass]="{'invalid': otherForm.controls.name.touched && !otherForm.controls.name.valid}">Naziv</label>
+            <input type="text" name="name" id="name" formControlName="name">
+        </div>
+        <div class="formGroup">
+            <label for="cost" [ngClass]="{'invalid': otherForm.controls.cost.touched && !otherForm.controls.cost.valid}">Cena</label>
+            <input type="number" name="cost" id="cost" formControlName="cost">
+        </div>
+        <div class="formGroup">
+            <button type="submit" class="btn" [disabled]="otherForm.invalid">
+                Dodaj
+            </button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,30 @@
+@import '../../../assets/scss/vars';
+
+.container {
+    display: inline-block;
+    padding: 1em 0;
+    background-color: white;
+    // border-top: $color-warehouse_item_border 1em solid;
+    // border-bottom: $color-warehouse_item_border 1em solid;
+    border-radius: 1em;
+    width: 12em;
+    height: 12em;
+    text-align: center;
+    margin: 2em;
+    box-shadow: 3px 3px 20px rgba($color: #000000, $alpha: 0.2);
+    overflow: hidden;
+    a {
+        img {
+            height: 100%;
+        }
+    }
+    button {
+        width: 100%;
+        padding: 1em 0;
+    }
+    &:hover {
+        // border-top: $color-warehouse_item_border_focused 1em solid;
+        // border-bottom: $color-warehouse_item_border_focused 1em solid;
+        transform: translate(0,-0.5em);
+    }
+}

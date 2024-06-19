@@ -1,0 +1,6 @@
+<div class="container">
+    <repeat-filter [filter]="parameters.filter" (filterChanged)="updateFilter($event)"></repeat-filter>
+    <repeat-item *ngFor="let item of items" [filter]="parameters.filter" [item]="item" [page]="parameters.page"></repeat-item>
+    <repeat-pagination *ngIf="itemCount" [selectedPage]="parameters.page" [totalItems]="itemCount" [pageSize]="parameters.pageSize" (pageChanged)="updatePage($event)"></repeat-pagination>
+    <p *ngIf="!itemCount">Nema rezultata</p>
+</div>

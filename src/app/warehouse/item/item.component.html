@@ -1,0 +1,12 @@
+<div class="container" (click)="navigateToDetails()">
+    <a>
+        <img src="assets/products/{{item?.photo}}.png" alt="Product image">
+    </a>
+    <button (click)="openDialog()">
+        Prodaj
+    </button>
+</div>
+
+<div *ngIf="dialogVisible">
+
+</div>

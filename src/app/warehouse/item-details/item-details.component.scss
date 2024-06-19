@@ -1,0 +1,78 @@
+.container {
+    padding: 7em 0 2em 0;
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+    .img-container {
+        box-shadow: 3px 3px 20px rgba($color: #000000, $alpha: 0.2);
+        border-radius: 1em;
+        overflow: hidden;
+        div {
+            background-color: black;
+            padding: 1em;
+            font-weight: 600;
+            span {
+                color: white;
+            }
+        }
+        img {
+            width: 100%;
+            padding: 2em;
+            background-color: white;
+        }
+        button {
+            width: 50%;
+            padding: 1em;
+            font-size: 1em;
+            font-weight: 600;
+            background-color: white;
+            // color: white;
+            border: none;
+            &:hover {
+                background-color: black;
+                color: white;
+            }
+            &:disabled {
+                background-color: rgb(209, 209, 209);
+                color: gray;
+            }
+            &#edit {
+                width: 100%;
+                border-top-right-radius: 1em;
+                border-top-left-radius: 1em;
+            }
+            &#sell {
+                border-top-right-radius: 1em;
+                border-bottom-right-radius: 1em;
+            }
+            &#donate {
+                border-top-left-radius: 1em;
+                border-bottom-left-radius: 1em;
+            }
+        }
+    }
+    p {
+        // margin: 2em 0;
+        padding: 1em 0;
+        border-bottom: black 1px solid;
+    }
+    #description {
+        text-transform: none;
+    }
+}
+
+.label {
+    font-weight: 600;
+}
+
+.value {
+    text-transform: capitalize;
+}
+
+.repeatButton {
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 2px solid black;
+    font-weight: 600;
+    background: none;
+}

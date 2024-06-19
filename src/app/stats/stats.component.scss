@@ -1,0 +1,36 @@
+.container {
+    padding: 7em 2em 2em 2em;
+    text-align: center;
+    p {
+        font-weight: 600;
+        padding-bottom: 1em;
+    }
+}
+
+.red {
+    color: red;
+    border: red;
+}
+
+.green {
+    color: green;
+    border: green;
+}
+
+#expense {
+    color: red;
+}
+
+#income {
+    color: green;
+}
+
+#balance {
+    font-size: 2em;
+    padding-top: 1em;
+    border: 2px solid;
+}
+
+#equity {
+    padding-top: 1em;
+}

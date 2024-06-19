@@ -1,0 +1,17 @@
+.container {
+    button {
+        background: none;
+        border: 2px solid black;
+        padding: 0.5em;
+        margin: 0.5em;
+        font-weight: 600;
+        &:disabled {
+            border: 2px solid rgb(196, 196, 196);
+            color: rgb(196, 196, 196);
+        }
+    }
+}
+
+.disabled {
+    color: rgb(196, 196, 196);
+}

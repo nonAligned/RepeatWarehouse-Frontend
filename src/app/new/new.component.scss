@@ -1,0 +1,24 @@
+.container {
+    padding: 7em 2em 0 2em;
+    text-align: center;
+    form {
+        label {
+            display: inline-block;
+            margin-right: 3em;
+        }
+        select {
+            display: inline-block;
+            border-radius: 0;
+            border: none;
+            border-bottom: 2px solid black;
+            padding: 0.5em;
+            width: 40%;
+        }
+    }
+    hr {
+        margin: 3em 0;
+        border: none;
+        height: 4px;
+        background-color: black;
+    }
+}

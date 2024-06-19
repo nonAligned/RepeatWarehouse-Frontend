@@ -1,0 +1,17 @@
+<div class="container">
+    <button [disabled]="selectedPage==1" (click)="changePage('previous')" id="navPrevious">
+        Nazad
+    </button>
+    <button [disabled]="selectedPage==1" (click)="changePage(1)" id="previousPage">
+        <span *ngIf="selectedPage!=1">1</span><span class="disabled" *ngIf="selectedPage==1">x</span>
+    </button>
+    <button id="currentPage">
+        {{selectedPage}}
+    </button>
+    <button [disabled]="selectedPage==totalPages" (click)="changePage(totalPages)" id="nextPage">
+        <span *ngIf="selectedPage!=totalPages">{{totalPages}}</span><span class="disabled" *ngIf="selectedPage==totalPages">x</span>
+    </button>
+    <button [disabled]="selectedPage==totalPages" (click)="changePage('next')" id="navNext">
+        Napred
+    </button>
+</div>

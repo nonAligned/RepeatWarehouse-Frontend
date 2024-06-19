@@ -1,0 +1,17 @@
+<div class="container">
+    <form>
+        <!-- <label for="formType">Izaberite šta unosite</label> -->
+        <select name="formType" id="formType" [(ngModel)]="formType">
+            <option value="">Izaberite</option>
+            <option value="item">Novi odevni predmet</option>
+            <option value="consumable">Nova potrošna roba</option>
+            <option value="marketing">Nova reklamna kampanja</option>
+            <option value="other">Novi trošak (ostalo)</option>
+        </select>
+    </form>
+    <hr>
+    <repeat-item-form *ngIf="formType=='item'"></repeat-item-form>
+    <repeat-consumable-form *ngIf="formType=='consumable'"></repeat-consumable-form>
+    <repeat-marketing-form *ngIf="formType=='marketing'"></repeat-marketing-form>
+    <repeat-other-form *ngIf="formType=='other'"></repeat-other-form>
+</div>

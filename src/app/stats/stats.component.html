@@ -1,0 +1,12 @@
+<div class="container">
+    <p id="expense">Ukupni rashodi = {{expense | currency: 'RSD':'code':'1.2-2'}}</p>
+    <p id="income">Ukupni prihodi = {{income | currency: 'RSD':'code':'1.2-2'}}</p>
+    <p><small>Broj komada u prodaji: {{activeItems?.length}}</small></p>
+    <p><small>Broj prodatih komada: {{soldItems?.length}}</small></p>
+    <p><small>Ukupan broj komada: {{itemCount}}</small></p>
+    <p id="balance" [ngClass]="{'red': income - expense < 0, 'green': income - expense >= 0}">Bilans = {{income - expense | currency: 'RSD':'code':'1.2-2'}}</p>
+    <p id="equity">Ukupna vrednost robe = {{equity | currency: 'RSD':'code':'1.2-2'}}</p>
+    <p id="stored">Vrednost neprodate robe = {{equity - income | currency: 'RSD':'code':'1.2-2'}}</p>
+    <p id="average">Prosečna cena komada = {{equity / itemCount | currency: 'RSD':'code':'1.2-2'}}</p>
+    <p id="average">Prosečna nabavna cena po komadu = {{expenseItems / itemCount | currency: 'RSD':'code':'1.2-2'}}</p>
+</div>
